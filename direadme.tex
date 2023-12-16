@@ -1,0 +1,159 @@
+\documentclass[]{dithesis}
+%\documentclass[suomi]{dithesis}
+
+
+\usepackage{amsmath}
+
+\title{Communications Networks I \\ (521340S) - Implementation}
+
+%%AUTHOR EN
+\author{
+\begin{tabular}{lll} \vspace{10pt}
+Author & \quad\quad & Dilan \\ \vspace{10pt}
+Supervisor & \quad\quad & NN \\ \vspace{10pt}
+Second examiner & \quad\quad & NN \\ \vspace{20pt}
+Technical supervisor & \quad\quad & NN \\ 
+\multicolumn{3}{c}{December 2023} \\
+\end{tabular}
+}
+
+%AUTHOR FI
+%\author{ %IN FINNISH
+%\begin{tabular}{lll} \vspace{10pt}
+%Tekij\"a & \quad\quad & Harri Saarnisaari \\ \vspace{10pt}
+%Valvoja & \quad\quad & NN \\ \vspace{10pt}
+%Toinen tarkastaja & \quad\quad & NN \\ \vspace{20pt}
+%Ty\"on tekninen ohjaaja & \quad\quad & NN \\ 
+%\multicolumn{3}{c}{Huhtikuu 2022} \\
+%\end{tabular}
+%}
+
+\begin{document}
+
+\maketitle
+
+\abstractpage{Saarnisaari H. (2022) This is readme for \LaTeXe\ DI-thesis class.}{Faculty of Information Technology and Electrical Engineering, Degree Programme in Electronics and Communications Engineering, 10 pages.}{This document gives information that are required in order to finish the layout. The original direadme.tex-file provides also an example file of usage of the class. The direadme.ps-file gives an example of the final appearance}{\LaTeXe\, , dithesis}
+
+\abstractother{Saarnisaari H. (2022) T\"am\"a on lueminut-tiedosto \LaTeXe\ DI-ty\"o cls-tiedostolle.}{Oulun yliopisto, tieto- ja s\"hk\"otekniikan tiedekunta, elektroniikan ja tietoliikennetekniikan tutkinto-ohjelma. Diplomity\"o, 10 sivua.}{T\"am\"a dokumentti antaa tietoa jota tarvitaan DI-ty\"on ulkon\"a\"on vii\-meistelyyn. Alkuper\"ainen direadme.tex-tiedosto toimii esimerkkin\"a cls-tiedoston k\"ayt\"ost\"a. Direadme.ps-tiedosto antaa esimerkin lopul\-lisesta ulkon\"a\"ost\"a.}{\LaTeXe\, , dithesis}
+
+\tableofcontents
+
+\prefacepage{This is my brief preface.\\ \\ Harri Saarnisaari}
+
+\symbolspage{
+\begin{tabular}{lll} 
+ABC & \quad\quad & an abbreviation \\ 
+$h$ &\quad\quad & a vector \\ 
+$f(x)$ & \\quad\quad & a function \\ 
+\end{tabular} 
+}
+
+%%CHAPTER STARTS HERE
+\chapter{HOW TO USE THIS CLASS}
+\setcounter{page}{7} %use this to set page numbering correctly after the first chapter title
+%\input{chapter text file}
+
+This is an introduction to \textit{dithesis.cls}-file. The class sets
+marginals and other layout parameters for our faculty's needs.
+
+\textit{dithesis.cls} is, by assumption, in English including some section titles like ABSTRACT. By an optional argument \emph{suomi} it can be used for theses that are written in Finnish. In that case also author block and appendix title have to be changed as shown in this file \emph{direadme.tex}.
+
+The class file calls \emph{graphicx} package. You don't have to recall it.
+
+Use this \emph{readme.tex} as an example about how-to. However, it is recommended that you write chapters in different files and call them with \emph{input} command. This keeps the file length manageable.  
+
+\section{Sectioning commands}
+There are four numbered section levels, namely \textit{chapter, section, subsection} and \textit{subsubsection} and one unnumbered section \textit{paragraph}. The thesis guidelines \cite{dithe} recommend using only maximum three levels. 
+
+\subsection{Thesis title and chapter titles}
+Write \emph{title, your name \textrm{and} chapter names} in CAPITAL letters. Rest are started with capital letter as usual. 
+
+\paragraph{Test title}
+of unnumbered section.
+
+\section{More instructions}
+More guidance below.
+
+\begin{itemize}
+\item This class produces extra page(s), but don't care. Remove them from the final pdf-file.
+\item For the abstract use \emph{abstractpage} command as shown in \emph{readme.tex} file. 
+\item For the abstract in another language use \emph{abstractother} command.
+\item Both abstract commands take four inputs. $\{$author (year) thesis title.$\}$ $\{$faculty info, page count.$\}$ $\{$ abstract text$\}$ $\{$ keywords$\}$
+\item For the preface, use \emph{prefacepage} command. The text can be in a separate file. Use \emph{input} command to call it.
+\item For the list of symbols and abbreviations use \emph{symbolspage} command. The list can be in a separate file. Use \emph{input} command to call it.
+\item If you don't have the list of symbols and abbreviations, use optional argument \emph{nosymbolspage}. This prevents one extra line in the contents.
+\item In the first text page of your thesis, set the page counter to the number explained in the DI-thesis manual \cite{dithe}. Basically, count from the title page to the first chapter.
+\item Use \emph{dithesis.bst} for bibliography style since regular \LaTeXe bibliography styles do not support referencing style required by the thesis.
+\item This manual and all the needed files are available in\\ https://www.overleaf.com/read/spsnwyhdccff
+ 
+\end{itemize}
+
+\chapter{SOME MORE INFO}
+\section{Figures}
+You have to have permission if you use others' figures form web pages, articles, books and so on due to intellectual property rights. Better use own figures. The caption is below and you have to refer to figure in the text part. Place figure element after referencing to it like done here to Figure \ref{fig:my_label}. Do not use h or H placements.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=4cm]{UOULUlogoFI.png}
+    \caption{Caption text. Ended by a dot.}
+    \label{fig:my_label}
+\end{figure}
+
+Figures are numbered by the chapter in this template. The thesis manual says that this is OK if there are plenty of figures.
+
+\section{Tables}
+The table caption is above the table and do not end to a dot as shown in Table \ref{tab:my_label}.
+
+\begin{table}[b]
+\caption{Caption text. No dot at the end}
+    \label{tab:my_label}
+    \centering
+    \begin{tabular}{c|c} \hline
+    Test   &  Table \\ \hline\hline
+       A  &  B \\ 
+       C & D \\ \hline
+    \end{tabular}
+    
+\end{table}
+
+\section{Equations}
+The \emph{amsmath} package is powerful too with equations. Note that equations are part of sentences. So, usually double dots : before them are not needed. Furthermore, use dots and commas after them as needed (a dot if the sentence is finished by an equation).
+
+A simple equation
+\begin{equation}
+    y=f(x),
+\end{equation}
+where $f(\ )$ denotes a function, is a simple example of this.
+
+\section{References}
+You can often get needed reference information in bibtex format from publisher's page. Save this in your bib-file. After doing referencing, e.g., like \cite{dithe} and \cite{Mahmood2020}, the result is shown in the References section.
+
+\bibliographystyle{dithesis}
+\bibliography{readme}
+
+
+%%APPENDIX
+\chapter{APPENDICES} %ENGLISH TITLE
+Appendix 1 \quad A proof \\
+Appendix 2 \quad Another proof
+
+%\chapter{LIITELUETTELO} %FINNISH TITLE
+%Liite 1 \quad A proof \\
+%Liite 2 2 \quad Another proof
+
+\newpage
+\noindent Appendix 1 \quad A proof\\ \\
+Appendices could contain mathematical proofs or computer program listings that are too lengthy for the main text.
+
+\newpage
+\noindent Appendix 2 \quad Another proof\\ \\
+It is shown that $1=1$.
+
+\end{document}
+
+
+
+
+
+
+
